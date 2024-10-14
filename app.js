@@ -27,7 +27,7 @@ let cumulativeChart;
 
 // Fetch transactions from the server
 async function fetchTransactions() {
-    const res = await fetch('http://localhost:5000/transactions'); // Backend URL
+    const res = await fetch('http://localhost:port/transactions'); // Backend URL
     const data = await res.json();
     transactions = data;
     console.log("Fetched transactions:", transactions);
@@ -52,7 +52,7 @@ async function addTransaction(type) {
 
     console.log("Adding transaction:", transaction); // Debugging statement
 
-    const res = await fetch('http://localhost:5000/transactions', {
+    const res = await fetch('http://localhost:port/transactions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(transaction)
@@ -71,7 +71,7 @@ async function addTransaction(type) {
 async function removeTransaction(id) {
     console.log("Removing transaction with ID:", id); // Debugging statement
 
-    await fetch(`http://localhost:5000/transactions/${id}`, {
+    await fetch(`http://localhost:port/transactions/${id}`, {
         method: 'DELETE'
     });
 
