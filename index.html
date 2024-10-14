@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="balance">
+                <h2>Your Balance</h2>
+                <h3 id="balance">$0.00</h3>
+            </div>
+
+            <div class="summary">
+                <div>
+                    <h4>Income</h4>
+                    <p id="income" class="money plus">+$0.00</p>
+                </div>
+                <div>
+                    <h4>Expenses</h4>
+                    <p id="expense" class="money minus">-$0.00</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="monthlyChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="cumulativeChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h3>Add new transaction</h3>
+            <form id="form">
+                <input type="text" id="description" placeholder="Enter description">
+                <input type="number" id="amount" placeholder="Enter amount">
+                <input type="date" id="date">
+                <div class="button-group">
+                    <button type="button" id="addIncome">Add Income</button>
+                    <button type="button" id="addExpense">Add Expense</button>
+                </div>
+            </form>
+
+            <ul id="transactions" class="list">
+                <!-- Transactions will be added here dynamically -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

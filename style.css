@@ -1,0 +1,145 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient colors */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for the entire layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section for balance and summary */
+.left-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Right section for the form and transaction list */
+.right-section {
+    width: 50%;
+}
+
+/* Balance section */
+.balance {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Summary for income and expense */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.summary div {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.money {
+    font-size: 1.5rem;
+}
+
+.money.plus {
+    color: #28a745;
+}
+
+.money.minus {
+    color: #dc3545;
+}
+
+/* Form styling */
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+/* Button group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Transaction list */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Styling for the chart container */
+.chart-container {
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Ensure the height is sufficient */
+    overflow: hidden;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important; /* Make sure the chart canvas takes the full height */
+}
