@@ -50,7 +50,7 @@ async function addTransaction(type) {
         type: type
     };
 
-    console.log("Adding transaction:", transaction); // Debugging statement
+    console.log("Adding transaction:", transaction); 
 
     const res = await fetch('http://localhost:port/transactions', {
         method: 'POST',
@@ -67,9 +67,9 @@ async function addTransaction(type) {
     dateInput.value = '';
 }
 
-// Remove transaction by ID (modified to delete from server)
+// Remove transaction by ID 
 async function removeTransaction(id) {
-    console.log("Removing transaction with ID:", id); // Debugging statement
+    console.log("Removing transaction with ID:", id); 
 
     await fetch(`http://localhost:port/transactions/${id}`, {
         method: 'DELETE'
@@ -132,10 +132,10 @@ function init() {
 
 // Chart.js functions for creating charts
 function createPieChart(income, expense) {
-    console.log("Creating Pie Chart with Income:", income, "and Expense:", expense); // Log chart data
+    console.log("Creating Pie Chart with Income:", income, "and Expense:", expense); 
 
     const ctx = document.getElementById('myChart').getContext('2d');
-    if (pieChart) pieChart.destroy(); // Destroy previous chart if exists
+    if (pieChart) pieChart.destroy(); 
 
     pieChart = new Chart(ctx, {
         type: 'pie',
@@ -157,7 +157,7 @@ function createPieChart(income, expense) {
 }
 
 function createMonthlyChart(monthlyData) {
-    console.log("Creating Monthly Chart with Data:", monthlyData); // Log chart data
+    console.log("Creating Monthly Chart with Data:", monthlyData); 
 
     const ctx = document.getElementById('monthlyChart').getContext('2d');
     if (monthlyChart) monthlyChart.destroy();
@@ -198,7 +198,7 @@ function createMonthlyChart(monthlyData) {
 }
 
 function createCumulativeChart(cumulativeData) {
-    console.log("Creating Cumulative Chart with Data:", cumulativeData); // Log chart data
+    console.log("Creating Cumulative Chart with Data:", cumulativeData); 
 
     const ctx = document.getElementById('cumulativeChart').getContext('2d');
     if (cumulativeChart) cumulativeChart.destroy();
@@ -251,14 +251,14 @@ function createCumulativeChart(cumulativeData) {
     });
 }
 
-// Group transactions by month
+
 // Group transactions by month
 function getMonthlyData() {
     const monthlyData = {};
 
     transactions.forEach(transaction => {
         // Parse the transaction date as a Date object
-        const dateObj = new Date(transaction.date); // Convert date string to Date object
+        const dateObj = new Date(transaction.date); 
 
         if (!isNaN(dateObj.getTime())) { // Ensure the date is valid
             const month = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
