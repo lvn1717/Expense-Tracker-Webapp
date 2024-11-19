@@ -12,7 +12,7 @@ app.use(express.json());
 // MySQL connection setup
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',// your MYSQL user
+  user: '',// your MYSQL user
   password: '', // Your MySQL password
   database: 'expense_tracker' // Your database name
 });
